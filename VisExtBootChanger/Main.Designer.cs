@@ -41,11 +41,12 @@ namespace VisExtBootChanger
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.requirementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howToMakeBootImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToRevertBackToDefaultBootScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.howToRevertBackToDefaultBootScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,8 @@ namespace VisExtBootChanger
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
@@ -85,7 +87,7 @@ namespace VisExtBootChanger
             this.ntoskrnlToolStripMenuItem,
             this.imageFileToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -106,14 +108,14 @@ namespace VisExtBootChanger
             // presetsToolStripMenuItem
             // 
             this.presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
-            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.presetsToolStripMenuItem.Text = "Presets";
             this.presetsToolStripMenuItem.Click += new System.EventHandler(this.presetsToolStripMenuItem_Click);
             // 
             // extractImageToolStripMenuItem
             // 
             this.extractImageToolStripMenuItem.Name = "extractImageToolStripMenuItem";
-            this.extractImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.extractImageToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.extractImageToolStripMenuItem.Text = "Extract image";
             this.extractImageToolStripMenuItem.Click += new System.EventHandler(this.extractImageToolStripMenuItem_Click);
             // 
@@ -124,7 +126,7 @@ namespace VisExtBootChanger
             this.howToMakeBootImageToolStripMenuItem,
             this.howToRevertBackToDefaultBootScreenToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // requirementsToolStripMenuItem
@@ -141,10 +143,17 @@ namespace VisExtBootChanger
             this.howToMakeBootImageToolStripMenuItem.Text = "How to make boot image correctly";
             this.howToMakeBootImageToolStripMenuItem.Click += new System.EventHandler(this.howToMakeBootImageToolStripMenuItem_Click);
             // 
+            // howToRevertBackToDefaultBootScreenToolStripMenuItem
+            // 
+            this.howToRevertBackToDefaultBootScreenToolStripMenuItem.Name = "howToRevertBackToDefaultBootScreenToolStripMenuItem";
+            this.howToRevertBackToDefaultBootScreenToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
+            this.howToRevertBackToDefaultBootScreenToolStripMenuItem.Text = "How to revert back to default boot screen";
+            this.howToRevertBackToDefaultBootScreenToolStripMenuItem.Click += new System.EventHandler(this.howToRevertBackToDefaultBootScreenToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -167,12 +176,12 @@ namespace VisExtBootChanger
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // howToRevertBackToDefaultBootScreenToolStripMenuItem
+            // optionsToolStripMenuItem
             // 
-            this.howToRevertBackToDefaultBootScreenToolStripMenuItem.Name = "howToRevertBackToDefaultBootScreenToolStripMenuItem";
-            this.howToRevertBackToDefaultBootScreenToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
-            this.howToRevertBackToDefaultBootScreenToolStripMenuItem.Text = "How to revert back to default boot screen";
-            this.howToRevertBackToDefaultBootScreenToolStripMenuItem.Click += new System.EventHandler(this.howToRevertBackToDefaultBootScreenToolStripMenuItem_Click);
+            this.optionsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
+            this.optionsToolStripMenuItem.Text = "Options";
             // 
             // Main
             // 
@@ -215,6 +224,7 @@ namespace VisExtBootChanger
         private System.Windows.Forms.ToolStripMenuItem requirementsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem howToMakeBootImageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem howToRevertBackToDefaultBootScreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
     }
 }
 
