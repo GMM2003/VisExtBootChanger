@@ -44,7 +44,7 @@ NOTE: If you want to apply an image without making one, skip to step 4 (unless m
 
 8. You will now be greeted with your new boot screen.
 
-# How to revert back to default boot screen
+# How to revert back to default boot screen:
 
 To apply the default boot screen:
 
