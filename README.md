@@ -1,3 +1,5 @@
+![icon2](https://user-images.githubusercontent.com/50250400/131222436-715ef3e2-8352-48bd-8735-9e656635bbc5.png)
+
 # VisExtBootChanger
 Changes the Windows Vista boot screen easily for Extended Kernel users.
 
