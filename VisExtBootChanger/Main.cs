@@ -224,5 +224,12 @@ namespace VisExtBootChanger
             snd.Play();
             System.Diagnostics.Process.Start(@"help\How to revert back to default boot screen.txt");
         }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Options o = new Options();
+            o.Show();
+            this.Hide();
+        }
     }
 }
