@@ -36,5 +36,10 @@ namespace VisExtBootChanger
             frs.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/GMM2003/VisExtBootChanger");
+        }
     }
 }

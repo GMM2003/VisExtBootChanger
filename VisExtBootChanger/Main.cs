@@ -231,5 +231,11 @@ namespace VisExtBootChanger
             o.Show();
             this.Hide();
         }
+
+        private void authuiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AuthUI aui = new AuthUI();
+            aui.Show();
+        }
     }
 }
