@@ -25,9 +25,7 @@ namespace VisExtBootChanger
 
         private void Options_Load(object sender, EventArgs e)
         {
-            ToolTip toolTip1 = new ToolTip();
-            toolTip1.ShowAlways = true;
-            toolTip1.SetToolTip(button2, "Changelog is not added yet. Will added in future betas.");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +38,11 @@ namespace VisExtBootChanger
         private void button3_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/GMM2003/VisExtBootChanger");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"help\Changelog.txt");
         }
     }
 }

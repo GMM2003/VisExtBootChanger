@@ -36,6 +36,8 @@ namespace VisExtBootChanger
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ntoskrnlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.authuiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extractImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,13 +46,11 @@ namespace VisExtBootChanger
             this.howToRevertBackToDefaultBootScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.authuiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -93,7 +93,7 @@ namespace VisExtBootChanger
             this.toolStripMenuItem2,
             this.authuiToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -111,17 +111,30 @@ namespace VisExtBootChanger
             this.imageFileToolStripMenuItem.Text = "Image file";
             this.imageFileToolStripMenuItem.Click += new System.EventHandler(this.imageFileToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(194, 22);
+            this.toolStripMenuItem2.Text = "------------------------";
+            // 
+            // authuiToolStripMenuItem
+            // 
+            this.authuiToolStripMenuItem.Name = "authuiToolStripMenuItem";
+            this.authuiToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.authuiToolStripMenuItem.Text = "authui.dll";
+            this.authuiToolStripMenuItem.Click += new System.EventHandler(this.authuiToolStripMenuItem_Click);
+            // 
             // presetsToolStripMenuItem
             // 
             this.presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
-            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.presetsToolStripMenuItem.Text = "Presets";
             this.presetsToolStripMenuItem.Click += new System.EventHandler(this.presetsToolStripMenuItem_Click);
             // 
             // extractImageToolStripMenuItem
             // 
             this.extractImageToolStripMenuItem.Name = "extractImageToolStripMenuItem";
-            this.extractImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.extractImageToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.extractImageToolStripMenuItem.Text = "Extract image";
             this.extractImageToolStripMenuItem.Click += new System.EventHandler(this.extractImageToolStripMenuItem_Click);
             // 
@@ -132,7 +145,7 @@ namespace VisExtBootChanger
             this.howToMakeBootImageToolStripMenuItem,
             this.howToRevertBackToDefaultBootScreenToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // requirementsToolStripMenuItem
@@ -159,7 +172,7 @@ namespace VisExtBootChanger
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -170,6 +183,14 @@ namespace VisExtBootChanger
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
+            this.optionsToolStripMenuItem.Text = "Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -182,14 +203,6 @@ namespace VisExtBootChanger
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
-            this.optionsToolStripMenuItem.Text = "Options";
-            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -200,7 +213,7 @@ namespace VisExtBootChanger
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "PRE-RELEASE - v1.1.0.0-beta2";
+            this.label1.Text = "PRE-RELEASE - v1.1.0.0-beta3";
             // 
             // label2
             // 
@@ -213,19 +226,6 @@ namespace VisExtBootChanger
             this.label2.Size = new System.Drawing.Size(319, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "This version is a pre-release. Some features are not complete.";
-            // 
-            // authuiToolStripMenuItem
-            // 
-            this.authuiToolStripMenuItem.Name = "authuiToolStripMenuItem";
-            this.authuiToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.authuiToolStripMenuItem.Text = "authui.dll";
-            this.authuiToolStripMenuItem.Click += new System.EventHandler(this.authuiToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(194, 22);
-            this.toolStripMenuItem2.Text = "------------------------";
             // 
             // Main
             // 

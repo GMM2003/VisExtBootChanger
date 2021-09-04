@@ -25,7 +25,7 @@ namespace VisExtBootChanger
 
         private void Preview_Load(object sender, EventArgs e)
         {
-            pictureBox1.ImageLocation = @"bin/preview.png";
+            pictureBox1.ImageLocation = @"bin/preview.gif";
             ToolTip toolTip1 = new ToolTip();
             toolTip1.ShowAlways = true;
             toolTip1.SetToolTip(button1, "This option will use the changed NTOSKRNL to replace the existing file (on System32) with that one. WARNING: MAKE SURE YOU HAVE EXTENDED KERNEL INSTALLED WITH VERSION 6.0.6003.20555.");
@@ -53,9 +53,8 @@ namespace VisExtBootChanger
             System.IO.Stream str = Properties.Resources.SELECT;
             System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
             snd.Play();
-            File.Delete(@"bin/preview.png");
+            File.Delete(@"bin/preview.gif");
             string destPath = "modified/ntoskrnl-modified.exe";
-            string destBackupPath = "modified/ntoskrnl-modified-original.exe";
             string existoriginalPath = "modified/ntoskrnl-modified-original.exe";
             if (File.Exists(destPath))
             {
@@ -93,7 +92,7 @@ namespace VisExtBootChanger
             System.IO.Stream str = Properties.Resources.SELECT;
             System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
             snd.Play();
-            File.Delete(@"bin/preview.png");
+            File.Delete(@"bin/preview.gif");
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 Title = "Browse BMP file",
@@ -129,7 +128,7 @@ namespace VisExtBootChanger
                 var process2 = System.Diagnostics.Process.Start("ResourceHacker.exe", imageReplace);
 
                 string previewImage;
-                previewImage = "-i bin/image.bmp -i bin/mask.png -filter_complex 'overlay' -codec:a copy bin/preview.png";
+                previewImage = "-i bin/image.bmp -i bin/animated.gif -filter_complex 'overlay' -codec:a copy bin/preview.gif";
                 var process = System.Diagnostics.Process.Start("ffmpeg.exe", previewImage);
 
                 process2.WaitForExit();
@@ -146,7 +145,7 @@ namespace VisExtBootChanger
             System.IO.Stream str = Properties.Resources.HOVER;
             System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
             snd.Play();
-            File.Delete(@"bin/preview.png");
+            File.Delete(@"bin/preview.gif");
             var process = System.Diagnostics.Process.Start("installm.bat");
 
             process.WaitForExit();

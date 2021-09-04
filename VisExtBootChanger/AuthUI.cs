@@ -43,15 +43,6 @@ namespace VisExtBootChanger
             System.Diagnostics.Process.Start("ResourceHacker.exe", extractBootImage5);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            pictureBox1.ImageLocation = @"bin\images\part1.png";
-            pictureBox2.ImageLocation = @"bin\images\part2.png";
-            pictureBox3.ImageLocation = @"bin\images\part3.png";
-            pictureBox4.ImageLocation = @"bin\images\part4.png";
-            pictureBox5.ImageLocation = @"bin\images\part5.png";
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             string extractBootImage;
@@ -84,6 +75,61 @@ namespace VisExtBootChanger
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            pictureBox1.ImageLocation = @"bin\images\part1.png";
+            pictureBox2.ImageLocation = @"bin\images\part2.png";
+            pictureBox3.ImageLocation = @"bin\images\part3.png";
+            pictureBox4.ImageLocation = @"bin\images\part4.png";
+            pictureBox5.ImageLocation = @"bin\images\part5.png";
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = @"bin\images\part1.png";
+            pictureBox2.ImageLocation = @"bin\images\part2.png";
+            pictureBox3.ImageLocation = @"bin\images\part3.png";
+            pictureBox4.ImageLocation = @"bin\images\part4.png";
+            pictureBox5.ImageLocation = @"bin\images\part5.png";
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            // OpenFileDialog openFileDialog1 = new OpenFileDialog
+            // {
+                //Title = "Browse PNG file",
+
+                // CheckFileExists = true,
+                // CheckPathExists = true,
+
+                // DefaultExt = "PNG",
+                // Filter = "PNG files (*.png)|*.png",
+                // FilterIndex = 2,
+
+                // ReadOnlyChecked = false,
+                // ShowReadOnly = false,
+            // };
+
+            // if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            // {
+
+            // }
+        }
+
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string message = "This is a preview. Will work when done.";
+            string title = "Restart";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+            DialogResult result = MessageBox.Show(message, title, buttons);
         }
     }
 }
