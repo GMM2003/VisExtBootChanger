@@ -237,5 +237,194 @@ namespace VisExtBootChanger
             AuthUI aui = new AuthUI();
             aui.Show();
         }
+
+        private void convertToIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void withXPcolorPaletteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                Title = "Browse image file",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "BMP|JPG|JPEG|PNG",
+                Filter = "BMP files (*.bmp)|*.bmp|JPG files (*.jpg)|*.jpg|JPEG files (*.jpeg)|*.jpeg|PNG files (*.png)|*.png",
+                FilterIndex = 2,
+
+                ReadOnlyChecked = false,
+                ShowReadOnly = false,
+            };
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string destFile = Path.Combine("bin/convert/", Path.GetFileName(openFileDialog1.FileName));
+                File.Copy(openFileDialog1.FileName, destFile, true);
+                System.IO.FileInfo fi = new System.IO.FileInfo(destFile);
+                if (fi.Exists)
+                {
+                    if (File.Exists("bin/convert/image.png"))
+                    {
+                        File.Delete("bin/convert/image.png");
+                    }
+                    fi.MoveTo(@"bin/convert/image.png");
+                }
+
+                string resizeDither;
+                resizeDither = "bin/convert/image.png -resize 640x480! -type Palette -white-threshold 3000% -dither FloydSteinberg -colors 16 -depth 4 bin/convert/temp.bmp";
+                var process = System.Diagnostics.Process.Start("convert.exe", resizeDither);
+
+                process.WaitForExit();
+
+                string applyXPColorMap;
+                applyXPColorMap = "-remap bin/convert/map.png bin/convert/temp.bmp -define bmp:preserve-colormap=true -define bmp:compression-level=9 -define bmp:compression-strategy=0 -define bmp:exclude-chunk=all bin/convert/output.bmp";
+                var process2 = System.Diagnostics.Process.Start("convert.exe", applyXPColorMap);
+
+                process2.WaitForExit();
+
+                string pfx86 = Environment.ExpandEnvironmentVariables("%ProgramFiles(x86)%" + @"\Pixelformer\Pixelformer.exe");
+
+                if (File.Exists(pfx86))
+                {
+                    string openBitmap;
+                    openBitmap = @"bin\convert\output.bmp";
+                    System.Diagnostics.Process.Start(pfx86, openBitmap);
+
+                    System.IO.Stream str = Properties.Resources.important;
+                    System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
+                    snd.Play();
+                    string message = "Pixelformer is open with the created file. Save the file as a 16 color BMP file, then use 'File > Open > Image file' to apply the created bitmap. The created file is NOT a Windows bitmap, meaning that it won't show properly when applied.";
+                    string title = "Important";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                }
+                else
+                {
+                    System.IO.Stream str = Properties.Resources.Windows_Ding;
+                    System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
+                    snd.Play();
+                    string message = "VisExtBootChanger cannot view the converted file because Pixelformer is not installed or placed in different path. If not installed, go to 'http://www.qualibyte.com/pixelformer/download.html', download the installer, install and then try again. Otherwise, if you have Pixelformer installed, run the program and save the file as a 16 color BMP file, then use 'File > Open > Image file' to apply the created bitmap. The created file is NOT a Windows bitmap, meaning that it won't show properly when applied.";
+                    string title = "Info";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.OK)
+                    {
+                        this.Hide();
+                    }
+                }
+            }
+        }
+
+        private void withoutXPcolorPaletteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                Title = "Browse image file",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "BMP|JPG|JPEG|PNG",
+                Filter = "BMP files (*.bmp)|*.bmp|JPG files (*.jpg)|*.jpg|JPEG files (*.jpeg)|*.jpeg|PNG files (*.png)|*.png",
+                FilterIndex = 2,
+
+                ReadOnlyChecked = false,
+                ShowReadOnly = false,
+            };
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string destFile = Path.Combine("bin/convert/", Path.GetFileName(openFileDialog1.FileName));
+                File.Copy(openFileDialog1.FileName, destFile, true);
+                System.IO.FileInfo fi = new System.IO.FileInfo(destFile);
+                if (fi.Exists)
+                {
+                    if (File.Exists("bin/convert/image.png"))
+                    {
+                        File.Delete("bin/convert/image.png");
+                    }
+                    fi.MoveTo(@"bin/convert/image.png");
+                }
+
+                string resizeDither;
+                resizeDither = "bin/convert/image.png -resize 640x480! -type Palette -white-threshold 3000% -dither FloydSteinberg -colors 16 -depth 4 bin/convert/temp.bmp";
+                var process = System.Diagnostics.Process.Start("convert.exe", resizeDither);
+
+                process.WaitForExit();
+
+                string destFile2 = Path.Combine("bin/", Path.GetFileName(openFileDialog1.FileName));
+                File.Copy("bin/convert/temp.bmp", destFile2, true);
+                System.IO.FileInfo fi2 = new System.IO.FileInfo(destFile2);
+                if (fi2.Exists)
+                {
+                    if (File.Exists("convert/image.bmp"))
+                    {
+                        File.Delete("convert/image.bmp");
+                    }
+                    fi2.MoveTo(@"convert/image.bmp");
+                }
+            }
+        }
+
+        private void withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            {
+                Title = "Browse image file",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "BMP|JPG|JPEG|PNG",
+                Filter = "BMP files (*.bmp)|*.bmp|JPG files (*.jpg)|*.jpg|JPEG files (*.jpeg)|*.jpeg|PNG files (*.png)|*.png",
+                FilterIndex = 2,
+
+                ReadOnlyChecked = false,
+                ShowReadOnly = false,
+            };
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string destFile = Path.Combine("bin/convert/", Path.GetFileName(openFileDialog1.FileName));
+                File.Copy(openFileDialog1.FileName, destFile, true);
+                System.IO.FileInfo fi = new System.IO.FileInfo(destFile);
+                if (fi.Exists)
+                {
+                    if (File.Exists("bin/convert/image.png"))
+                    {
+                        File.Delete("bin/convert/image.png");
+                    }
+                    fi.MoveTo(@"bin/convert/image.png");
+                }
+
+                string resizeDither;
+                resizeDither = "bin/convert/image.png -resize 640x480! -type Palette -white-threshold 3000% -dither FloydSteinberg -colors 16 -depth 4 bin/convert/temp.bmp";
+                var process = System.Diagnostics.Process.Start("convert.exe", resizeDither);
+
+                process.WaitForExit();
+
+                string applyXPColorMap;
+                applyXPColorMap = "-remap bin/convert/map.png bin/convert/temp.bmp -define bmp:preserve-colormap=true -define bmp:compression-level=9 -define bmp:compression-strategy=0 -define bmp:exclude-chunk=all bin/convert/output.bmp";
+                var process2 = System.Diagnostics.Process.Start("convert.exe", applyXPColorMap);
+
+                process2.WaitForExit();
+
+                string destFile2 = Path.Combine("bin/", Path.GetFileName(openFileDialog1.FileName));
+                File.Copy("bin/convert/output.bmp", destFile2, true);
+                System.IO.FileInfo fi2 = new System.IO.FileInfo(destFile2);
+                if (fi2.Exists)
+                {
+                    if (File.Exists("convert/image.bmp"))
+                    {
+                        File.Delete("convert/image.bmp");
+                    }
+                    fi2.MoveTo(@"convert/image.bmp");
+                }
+            }
+        }
     }
 }

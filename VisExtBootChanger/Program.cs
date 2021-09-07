@@ -15,7 +15,7 @@ namespace VisExtBootChanger
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartCheck());
+            Application.Run(new Main());
         }
     }
 }

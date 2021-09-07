@@ -188,6 +188,7 @@
     <None Include="Resources\Windows Shutdown.wav" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\important.wav" />
     <None Include="Resources\SELECT_A.WAV" />
     <None Include="Resources\ChangeMetadata.wav" />
     <None Include="bin\Debug\bin\START.wav" />

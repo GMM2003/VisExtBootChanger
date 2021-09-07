@@ -72,6 +72,15 @@ namespace VisExtBootChanger.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream important {
+            get {
+                return ResourceManager.GetStream("important", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream SELECT {
             get {
                 return ResourceManager.GetStream("SELECT", resourceCulture);
