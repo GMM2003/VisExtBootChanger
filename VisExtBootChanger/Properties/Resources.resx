@@ -124,6 +124,9 @@
   <data name="important" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\important.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="INTROMUSIC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\bin\INTROMUSIC.wav;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="SELECT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SELECT_A.WAV;System.IO.MemoryStream, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

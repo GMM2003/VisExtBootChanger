@@ -192,6 +192,9 @@
     <None Include="Resources\SELECT_A.WAV" />
     <None Include="Resources\ChangeMetadata.wav" />
     <None Include="bin\Debug\bin\START.wav" />
+    <None Include="bin\Debug\bin\WELCOMEINTRO.wav" />
+    <None Include="bin\Debug\bin\INTROMUSIC2.wav" />
+    <None Include="bin\Debug\bin\INTROMUSIC.wav" />
     <Content Include="icon2.ico" />
   </ItemGroup>
   <ItemGroup>

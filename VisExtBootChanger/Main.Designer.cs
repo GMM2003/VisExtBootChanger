@@ -40,6 +40,9 @@ namespace VisExtBootChanger
             this.authuiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.convertToIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.withXPcolorPaletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.withoutXPcolorPaletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extractImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.requirementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,9 +55,6 @@ namespace VisExtBootChanger
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.withXPcolorPaletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.withoutXPcolorPaletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +98,7 @@ namespace VisExtBootChanger
             this.toolStripMenuItem2,
             this.authuiToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -132,7 +132,7 @@ namespace VisExtBootChanger
             // presetsToolStripMenuItem
             // 
             this.presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
-            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.presetsToolStripMenuItem.Text = "Presets";
             this.presetsToolStripMenuItem.Click += new System.EventHandler(this.presetsToolStripMenuItem_Click);
             // 
@@ -143,14 +143,35 @@ namespace VisExtBootChanger
             this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem,
             this.withoutXPcolorPaletteToolStripMenuItem});
             this.convertToIToolStripMenuItem.Name = "convertToIToolStripMenuItem";
-            this.convertToIToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.convertToIToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.convertToIToolStripMenuItem.Text = "Convert";
             this.convertToIToolStripMenuItem.Click += new System.EventHandler(this.convertToIToolStripMenuItem_Click);
+            // 
+            // withXPcolorPaletteToolStripMenuItem
+            // 
+            this.withXPcolorPaletteToolStripMenuItem.Name = "withXPcolorPaletteToolStripMenuItem";
+            this.withXPcolorPaletteToolStripMenuItem.Size = new System.Drawing.Size(455, 22);
+            this.withXPcolorPaletteToolStripMenuItem.Text = "Apply XP-color palette with Pixelformer (USE THIS FOR BOOT)";
+            this.withXPcolorPaletteToolStripMenuItem.Click += new System.EventHandler(this.withXPcolorPaletteToolStripMenuItem_Click);
+            // 
+            // withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem
+            // 
+            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem.Name = "withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem";
+            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem.Size = new System.Drawing.Size(455, 22);
+            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem.Text = "Apply XP-color palette without Pixelformer (DON\'T USE THIS FOR BOOT)";
+            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem.Click += new System.EventHandler(this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem_Click);
+            // 
+            // withoutXPcolorPaletteToolStripMenuItem
+            // 
+            this.withoutXPcolorPaletteToolStripMenuItem.Name = "withoutXPcolorPaletteToolStripMenuItem";
+            this.withoutXPcolorPaletteToolStripMenuItem.Size = new System.Drawing.Size(455, 22);
+            this.withoutXPcolorPaletteToolStripMenuItem.Text = "Don\'t apply XP-color palette (DON\'T USE THIS FOR BOOT)";
+            this.withoutXPcolorPaletteToolStripMenuItem.Click += new System.EventHandler(this.withoutXPcolorPaletteToolStripMenuItem_Click);
             // 
             // extractImageToolStripMenuItem
             // 
             this.extractImageToolStripMenuItem.Name = "extractImageToolStripMenuItem";
-            this.extractImageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.extractImageToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.extractImageToolStripMenuItem.Text = "Extract image";
             this.extractImageToolStripMenuItem.Click += new System.EventHandler(this.extractImageToolStripMenuItem_Click);
             // 
@@ -161,7 +182,7 @@ namespace VisExtBootChanger
             this.howToMakeBootImageToolStripMenuItem,
             this.howToRevertBackToDefaultBootScreenToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // requirementsToolStripMenuItem
@@ -188,7 +209,7 @@ namespace VisExtBootChanger
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -229,7 +250,7 @@ namespace VisExtBootChanger
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "PRE-RELEASE - v1.1.0.0-beta4";
+            this.label1.Text = "PRE-RELEASE - v1.1.0.0-beta5";
             // 
             // label2
             // 
@@ -242,27 +263,6 @@ namespace VisExtBootChanger
             this.label2.Size = new System.Drawing.Size(319, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "This version is a pre-release. Some features are not complete.";
-            // 
-            // withXPcolorPaletteToolStripMenuItem
-            // 
-            this.withXPcolorPaletteToolStripMenuItem.Name = "withXPcolorPaletteToolStripMenuItem";
-            this.withXPcolorPaletteToolStripMenuItem.Size = new System.Drawing.Size(455, 22);
-            this.withXPcolorPaletteToolStripMenuItem.Text = "Apply XP-color palette with Pixelformer (USE THIS FOR BOOT)";
-            this.withXPcolorPaletteToolStripMenuItem.Click += new System.EventHandler(this.withXPcolorPaletteToolStripMenuItem_Click);
-            // 
-            // withoutXPcolorPaletteToolStripMenuItem
-            // 
-            this.withoutXPcolorPaletteToolStripMenuItem.Name = "withoutXPcolorPaletteToolStripMenuItem";
-            this.withoutXPcolorPaletteToolStripMenuItem.Size = new System.Drawing.Size(455, 22);
-            this.withoutXPcolorPaletteToolStripMenuItem.Text = "Don\'t apply XP-color palette (DON\'T USE THIS FOR BOOT)";
-            this.withoutXPcolorPaletteToolStripMenuItem.Click += new System.EventHandler(this.withoutXPcolorPaletteToolStripMenuItem_Click);
-            // 
-            // withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem
-            // 
-            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem.Name = "withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem";
-            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem.Size = new System.Drawing.Size(455, 22);
-            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem.Text = "Apply XP-color palette without Pixelformer (DON\'T USE THIS FOR BOOT)";
-            this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem.Click += new System.EventHandler(this.withXPcolorPaletteDONTUSETHISFORBOOTToolStripMenuItem_Click);
             // 
             // Main
             // 

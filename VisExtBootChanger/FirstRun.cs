@@ -42,6 +42,10 @@ namespace VisExtBootChanger
 
         private void button1_Click(object sender, EventArgs e)
         {
+            System.IO.Stream str2 = Properties.Resources.INTROMUSIC;
+            System.Media.SoundPlayer snd2 = new System.Media.SoundPlayer(str2);
+            snd2.Stop();
+
             File.Delete("bin/fr.fr");
             FirstRunStart frs = new FirstRunStart();
             frs.Show();
@@ -50,7 +54,25 @@ namespace VisExtBootChanger
 
         private void FirstRun_Load(object sender, EventArgs e)
         {
-            
+            System.IO.Stream str2 = Properties.Resources.INTROMUSIC;
+            System.Media.SoundPlayer snd2 = new System.Media.SoundPlayer(str2);
+            snd2.PlayLooping();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            axWindowsMediaPlayer1.Visible = false;
+        }
+
+        private void axWindowsMediaPlayer1_ClickEvent(object sender, AxWMPLib._WMPOCXEvents_ClickEvent e)
+        {
+            System.IO.Stream str2 = Properties.Resources.INTROMUSIC;
+            System.Media.SoundPlayer snd2 = new System.Media.SoundPlayer(str2);
+            snd2.PlayLooping();
+
+            timer1.Stop();
+            axWindowsMediaPlayer1.Visible = false;
         }
     }
 }

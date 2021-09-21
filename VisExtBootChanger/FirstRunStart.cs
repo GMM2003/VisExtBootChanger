@@ -19,9 +19,14 @@ namespace VisExtBootChanger
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
-            SplashScreen ss = new SplashScreen();
-            ss.Show();
+            Main m = new Main();
+            m.Show();
             this.Hide();
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
